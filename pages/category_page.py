@@ -13,6 +13,7 @@ category_item_button_selector = (By.XPATH, '//*[@id="left_container"]/div/ul[2]/
 filter_button_selector = (By.XPATH, '//*[@id="genre257"]')
 submit_filter_button_selector = (By.XPATH, '//*[@id="applymsg"]')
 artwork_name_selector = (By.XPATH, '//*[text()="Трамвайный путь"]')
+artwork_style_selector = (By.XPATH, '//*[@id="main_container"]/div[3]/div[2]/div[5]/a')
 
 
 class CategoryPage(BasePage):
@@ -36,5 +37,8 @@ class CategoryPage(BasePage):
 
     def find_artwork_name(self):
         return self.find(artwork_name_selector)
+    
+    def check_artwork_style(self):
+        return self.find(artwork_style_selector)
 
 
