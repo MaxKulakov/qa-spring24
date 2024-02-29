@@ -1,5 +1,5 @@
-# pytest tests/test_2.py -vx --alluredir results
-# pytest -vx --alluredir results    
+# pytest tests/test_2.py -vx --alluredir results 
+# pytest -vx -n=4 --alluredir results    
 # allure serve results   
 
 import pytest
