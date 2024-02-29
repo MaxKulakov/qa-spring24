@@ -1,0 +1,12 @@
+/task/*.pdf
+
+.DS_Store
+
+node_modules
+
+/allure-results
+
+__pycache__
+.pytest_cache
+
+/results/
