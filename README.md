@@ -1,9 +1,10 @@
 # qa-spring24
 
-run 
-# pytest tests/1-test.py -vx
-# pytest -vx --alluredir results    
-# allure serve results   
+run single file  
+`pytest tests/test_5.py -vx --alluredir results`
 
-# single run
-# pytest ./tests/test_1.py -vx --alluredir results
+run all tests  
+`pytest -vx --alluredir results`
+
+view allure report  
+`allure serve results`   
