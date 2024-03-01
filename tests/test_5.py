@@ -22,7 +22,6 @@ def test_cart_artwork(browser):
             artwork_price = cart_page.first_artwork_price().text
             cart_page.add_to_cart_button().click()
 
-
         with allure.step('Переход на страницу корзины'):
             cart_page.go_to_cart_button().click()
             
