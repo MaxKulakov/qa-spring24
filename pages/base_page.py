@@ -4,3 +4,4 @@ class BasePage:
 
     def find(self, args):
         return self.browser.find_element(*args)
+    

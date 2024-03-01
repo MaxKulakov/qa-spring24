@@ -1,10 +1,5 @@
 from pages.base_page import BasePage
-import pytest
-from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import NoSuchElementException
-import allure
-from time import sleep
 from pages.base_page import BasePage
 
 
