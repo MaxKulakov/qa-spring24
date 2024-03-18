@@ -2,7 +2,7 @@ import allure
 from pages.search_page import SearchPage
 
 
-@allure.feature('Search Page. Failed test')
+@allure.feature('Search Page')
 @allure.story('Поиск картины с трамваем, содержащей в названии "Жираф"')
 def test_failed_search_artwork(browser):
     try:
