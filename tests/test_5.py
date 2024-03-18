@@ -18,15 +18,17 @@ def test_cart_artwork(browser):
             cart_page.category_item_button().click()
 
         with allure.step('Добавление первого изделия в корзину и запоминание его названия и цены'):
-            artwork_name = cart_page.first_artwork_name().text
+            artwork_name = ' '.join(cart_page.first_artwork_name().text.split())
             artwork_price = cart_page.first_artwork_price().text
             cart_page.add_to_cart_button().click()
 
         with allure.step('Переход на страницу корзины'):
             cart_page.go_to_cart_button().click()
-            
-        assert cart_page.cart_artwork_name().text in artwork_name
-        assert artwork_price == cart_page.cart_artwork_price().text
+            cart_artwork_name = ' '.join(cart_page.cart_artwork_name().text.split())
+            cart_artwork_price = cart_page.cart_artwork_price().text
+
+        assert cart_artwork_name in artwork_name
+        assert artwork_price == cart_artwork_price
     except:
         allure.attach(browser.get_screenshot_as_png(), attachment_type=allure.attachment_type.PNG)
         assert False

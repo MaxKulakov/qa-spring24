@@ -9,8 +9,8 @@ first_artwork_name_selector = (By.CSS_SELECTOR, '#sa_container > div:nth-child(3
 first_artwork_price_selector = (By.CSS_SELECTOR, '#sa_container > div:nth-child(3) > div.price')
 add_to_cart_button_selector = (By.CSS_SELECTOR, '#sa_container > div:nth-child(3) > a:nth-last-of-type(1) > div')
 go_to_cart_button_selector = (By.XPATH, '//*[@id="cmodal"]/div/p/button[1]')
-cart_artwork_name_selector = (By.XPATH, '//*[@id="cart1127052"]/div[3]/div[1]/a')
-cart_artwork_price_selector = (By.XPATH, '//*[@id="cart1127052"]/div[3]/div[5]/div[2]')
+cart_artwork_name_selector = (By.CSS_SELECTOR, 'div.c_cell > div:nth-child(1) > a')
+cart_artwork_price_selector = (By.CSS_SELECTOR, 'div.c_cell > div.shop > div.price')
 
 
 class CartPage(BasePage):

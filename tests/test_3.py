@@ -18,13 +18,14 @@ def test_check_favorite_artwork(browser):
             favorite_page.category_item_button().click()
             
         with allure.step('Добавление первой картины в избранное и запоминание её названия'):
-            artwork_name = favorite_page.first_artwork_name().text
+            artwork_name = ' '.join(favorite_page.first_artwork_name().text.split())
             favorite_page.favorite_button().click()
 
         with allure.step('Переход на страницу избранного'):
             favorite_page.favorite_page_button().click()
+            favorite_artwork_name = ' '.join(favorite_page.first_artwork_name_in_favorite().text.split())
 
-        assert artwork_name == favorite_page.first_artwork_name_in_favorite().text
+        assert artwork_name == favorite_artwork_name
     except:
         allure.attach(browser.get_screenshot_as_png(), attachment_type=allure.attachment_type.PNG)
         assert False
